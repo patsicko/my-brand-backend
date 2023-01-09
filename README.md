@@ -39,8 +39,8 @@ Run npm install to install all dependencies.
 
 # Tools
 VS CODE
-# Author
-# MANIBAHO Patrick
+# Author: MANIBAHO Patrick
+
 
 
 
