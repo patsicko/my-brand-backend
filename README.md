@@ -38,7 +38,8 @@ Run git clone git@github.com:patsicko/my-brand-bakend.git to clone the repositor
 
 # Tools
 - VS CODE
-# Author: MANIBAHO Patrick
+# Author
+MANIBAHO Patrick
 
 
 
