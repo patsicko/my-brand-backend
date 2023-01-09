@@ -6,11 +6,11 @@ This brand of mine will help people to reach me, to know more about me, my skill
 # Project Description
  This project contains Model and controller for for the app. It creates APIs endpoints that the client uses to access the data on server
 # Technonlogies
-Environment : Nodejs
-Package Manager : NPM
-Compiler : Babel
-Framework: Express.js
-Database: MongoDB
+- Environment : Nodejs
+- Package Manager : NPM
+- Compiler : Babel
+- Framework: Express.js
+- Database: MongoDB
 
 # Requirements and Installation steps
 
@@ -28,17 +28,16 @@ MongoDB for Database
 From your computer, open terminal
 Run git clone git@github.com:patsicko/my-brand-bakend.git to clone the repository OR Download the project
 ## B. Setting up the environment
-Create a file and name it .env in root directory
-Find a file named .env.example
-use .env.example as a blueprint for your .env
-Provide values to all environmental variables in .env file.
-Run commands
-Open terminal from your computer
-
-Run npm install to install all dependencies.
+- Create a file and name it .env in root directory
+- Find a file named .env.example
+- use .env.example as a blueprint for your .env
+- Provide values to all environmental variables in .env file.
+# Run commands
+- Open terminal from your computer
+- Run npm install to install all dependencies.
 
 # Tools
-VS CODE
+- VS CODE
 # Author: MANIBAHO Patrick
 
 
