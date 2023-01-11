@@ -3,6 +3,8 @@ import cors from "cors";
 import dotenv from 'dotenv';
 import dbConnect from "./database/db";
 import mongoose from "mongoose";
+// import userRoute from "./routes/ContactRoute";
+import ContactRoute from "./routes/ContactRoute";
 mongoose.set('strictQuery',true)
 
 
@@ -21,3 +23,5 @@ app.listen(port,()=>{
 })
 
 dbConnect();
+
+app.use("/api",ContactRoute);
