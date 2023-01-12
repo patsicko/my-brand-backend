@@ -1,7 +1,8 @@
-import express from "express";
+
+import Express  from "express";
 
 import ContactController from "../controller/ContactController";
-const ContactRoute=express.Router();
+const ContactRoute=Express.Router();
 
 ContactRoute.post("/createMessage",ContactController.createMessage);
 ContactRoute.get("/getMessages/",ContactController.getMessages);
