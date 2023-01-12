@@ -87,6 +87,36 @@ static async deleteBlog(req,res){
 }
 
 
+static async updateBlog(req,res){
+    try{
+
+    const blog=await Blog.findOne(req.param.id);
+
+        blog.blogTitle=req.body.blogTitle;
+        blog.blogAuthor=req.body.blogAuthor;
+        blog.blogImage=req.body.blogImage;
+        blog.blogText=req.body.blogText;
+
+        const updated=await blog.save();
+
+        res.status(200).json({
+            "status":"success",
+            "message":"blog updated successfully",
+            "data":updated
+        })
+
+    }catch(error){
+     res.status(404).json({
+        "status":"error",
+        "message":error.message
+     })
+    }
+}
+
+
+
+
+
 }
 
 export default BlogController
