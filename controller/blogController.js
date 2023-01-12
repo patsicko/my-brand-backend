@@ -15,8 +15,35 @@ static async createBlog(req,res){
     res.status(201).json(blog); 
     console.log('blog created successully');
  }catch(error){
-    res.status(401).json(error.message)
+    res.status(401).json({
+        "status":"error",
+        "message":error.message
+    })
  }
+}
+
+
+
+static async retrieveBlogAll(req,res){
+    
+try{
+
+const blogs=await Blog.find();
+res.status(200).json({
+    "status":"success",
+    "data":{
+        "post":blogs
+    }
+
+})
+
+}catch(error){
+  res.status(404).json({
+    "status":"error",
+    "message":error.message
+  })
+}
+
 }
 
 
