@@ -69,6 +69,24 @@ static async retrieveBlogSingle(req,res){
 
 
 
+static async deleteBlog(req,res){
+    try{
+
+        await Blog.findByIdAndDelete(req.param.id);
+        res.status(200).json({
+            "status":"success",
+            "message":"blog deleted successfully"
+        })
+
+    }catch(error){
+        res.status(404).json({
+            "status":"error",
+            "message":error.message
+        })
+    }
+}
+
+
 }
 
 export default BlogController
