@@ -47,6 +47,28 @@ res.status(200).json({
 }
 
 
+static async retrieveBlogSingle(req,res){
+    try{
+        
+        const blog=await Blog.findOne(req.param.id);
+
+        res.status(200).json({
+            "status":"success",
+            "data":{
+                "post":blog
+            }
+        })
+
+    }catch(error){
+        res.status(404).json({
+            "status":"error",
+            "message":error.message
+        })
+    }
+}
+
+
+
 }
 
 export default BlogController
