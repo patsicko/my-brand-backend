@@ -51,6 +51,19 @@ class userController {
    }
 
 }
-}
 
+static async deleteUser(req,res) {
+
+    try{
+        const user=await User.findOneAndDelete({title:req.params.id});
+        res.status(200).json({
+            "status":"success", "message":"user deleted"})
+    }catch (error){
+        res.status(404).json({
+            "status":"error",
+            "message":error.message
+        })
+    }
+}
+}
 export default userController;
