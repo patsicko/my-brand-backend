@@ -17,6 +17,10 @@ blogImage:{
 blogText:{
     type:String,
     required:true
+},
+blogComments:{
+    type:String
+    
 }
 
 }) 

@@ -1,14 +1,20 @@
 import Blog from "../model/blogModel";
+import cloudinary from "../uploader/cloudinary";
+
+
 
 class BlogController{
 
 static async createBlog(req,res){
  try{
+
+    const result= await cloudinary.uploader.upload(req.file.path)
     const blog=new Blog({
         blogTitle:req.body.blogTitle,
         blogAuthor:req.body.blogAuthor,
-        blogImage:req.body.blogImage,
-        blogText:req.body.blogText
+        blogImage:result.secure_url,
+        blogText:req.body.blogText,
+        blogComments:req.body.blogComments,
     });
 
     await blog.save();;
@@ -89,12 +95,12 @@ static async deleteBlog(req,res){
 
 static async updateBlog(req,res){
     try{
-
+    await cloudinary.uploader.destroy(blog.blogImage)
     const blog=await Blog.findOne(req.param.id);
-
+    const result=cloudinary.uploader.upload(req.file.path)
         blog.blogTitle=req.body.blogTitle;
         blog.blogAuthor=req.body.blogAuthor;
-        blog.blogImage=req.body.blogImage;
+        blog.blogImage=result.secure_url;
         blog.blogText=req.body.blogText;
 
         const updated=await blog.save();
