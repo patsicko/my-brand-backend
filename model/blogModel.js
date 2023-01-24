@@ -12,7 +12,8 @@ blogAuthor:{
 },
 blogImage:{
     type:String,
-    required:true
+    required:true,
+  
 },
 blogText:{
     type:String,

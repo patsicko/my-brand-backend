@@ -11,4 +11,5 @@ userRoute.get("/getUser/:id",verifyToken,userController.getUser);
 userRoute.get("/deleteUser/:id",verifyToken,userController.deleteUser);
 userRoute.post("/login",userController.login);
 
+
 export default userRoute;

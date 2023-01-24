@@ -8,7 +8,8 @@ class BlogController{
 static async createBlog(req,res){
  try{
 
-    const result= await cloudinary.uploader.upload(req.file.path)
+    const result= await cloudinary.uploader.upload(req.file.path);
+   
     const blog=new Blog({
         blogTitle:req.body.blogTitle,
         blogAuthor:req.body.blogAuthor,
@@ -56,7 +57,7 @@ res.status(200).json({
 static async retrieveBlogSingle(req,res){
     try{
         
-        const blog=await Blog.findOne(req.param.id);
+        const blog=await Blog.findOne(req.params._id);
 
         res.status(200).json({
             "status":"success",
@@ -78,7 +79,7 @@ static async retrieveBlogSingle(req,res){
 static async deleteBlog(req,res){
     try{
 
-        await Blog.findByIdAndDelete(req.param.id);
+        await Blog.findByIdAndDelete(req.params.id);
         res.status(200).json({
             "status":"success",
             "message":"blog deleted successfully"
@@ -94,35 +95,66 @@ static async deleteBlog(req,res){
 
 
 static async updateBlog(req,res){
-    try{
-    await cloudinary.uploader.destroy(blog.blogImage)
-    const blog=await Blog.findOne(req.param.id);
-    const result=cloudinary.uploader.upload(req.file.path)
-        blog.blogTitle=req.body.blogTitle;
-        blog.blogAuthor=req.body.blogAuthor;
-        blog.blogImage=result.secure_url;
-        blog.blogText=req.body.blogText;
+//     try{
+  
+    // let blog=await Blog.findOne({id:req.params.id});
+//     console.log(blog)
+//     await cloudinary.uploader.destroy(blog.blogImage)
+//     const result=await cloudinary.uploader.upload(req.file.path);
+//     console.log("this is a blog image",result)
+//     const updatedBlog=await Blog.findByIdAndUpdate(req.params._id,{$set:{
+//         blogTitle:req.body.blogTitle,
+//         blogAuthor:req.body.blogAuthor,
+//         blogImage:result.secure_url,
+//         blogText:req.body.blogText,
 
-        const updated=await blog.save();
+//     }},{new:true})
 
-        res.status(200).json({
-            "status":"success",
-            "message":"blog updated successfully",
-            "data":updated
-        })
 
-    }catch(error){
-     res.status(404).json({
-        "status":"error",
-        "message":error.message
-     })
-    }
+        
+
+//         res.status(200).json({
+//             "status":"success",
+//             "message":"blog updated successfully",
+//             "data":updatedBlog
+//         })
+
+//     }catch(error){
+//      res.status(404).json({
+//         "status":"error",
+//         "message":error.message
+//      })
+//     }
+
+
+
+try {
+    const blog = await Blog.findById(req.params.id);
+    await cloudinary.uploader.destroy(blog.blogImage);
+    const result = await cloudinary.uploader.upload(req.file.path);
+    const updatedBlog = await Blog.findByIdAndUpdate(req.params.id,{$set:{
+        blogTitle:req.body.blogTitle,
+        blogAuthor:req.body.blogAuthor,
+        blogImage:result.secure_url,
+        blogText:req.body.blogText,
+    }},{new:true});
+    res.status(200).json({
+      status:"success",
+      data:updatedBlog
+    });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
 }
 
 
 
 
 
+
+
+
 }
+
 
 export default BlogController
