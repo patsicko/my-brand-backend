@@ -22,9 +22,7 @@ class ContactController {
           });
         }
       }
-
-
-
+      
     static async getMessages(req,res) {
       try {
      const messages=await Message.find();

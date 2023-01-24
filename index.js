@@ -5,6 +5,8 @@ import dbConnect from "./database/db";
 import mongoose from "mongoose";
 import ContactRoute from "./routes/ContactRoute";
 import BlogRoute from "./routes/blogRoute";
+import userRoute from "./routes/userRoute";
+import adminRoute from "./routes/adminRoute";
 
 mongoose.set('strictQuery',true)
 
@@ -26,4 +28,6 @@ app.listen(port,()=>{
 dbConnect();
 
 app.use("/api",ContactRoute);
-app.use("/api",BlogRoute)
+app.use("/api",BlogRoute);
+app.use("/api",userRoute);
+app.use("/admin",adminRoute);
