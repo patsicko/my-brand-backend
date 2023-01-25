@@ -1,10 +1,10 @@
 
 import Express  from "express";
-import validateMessage from "../middleware/messageValidation";
-import verifyToken from "../middleware/authenticate";
+import validateMessage from "../../middleware/messageValidation";
+import verifyToken from "../../middleware/authenticate";
 
 
-import ContactController from "../controller/ContactController";
+import ContactController from "../../controller/ContactController";
 const ContactRoute=Express.Router();
 
 ContactRoute.post("/createMessage",validateMessage,ContactController.createMessage);

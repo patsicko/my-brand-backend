@@ -1,9 +1,9 @@
 import Express from "express";
-import BlogController from "../controller/blogController";
-import upload from "../uploader/multer";
-import validateBlog from "../middleware/blogValidate";
-import  verifyToken  from "../middleware/authenticate";
-import {isAdmin,findUserById} from "../middleware/isAdmin";
+import BlogController from "../../controller/blogController";
+import upload from "../../uploader/multer";
+import validateBlog from "../../middleware/blogValidate";
+import  verifyToken  from "../../middleware/authenticate";
+import {isAdmin,findUserById} from "../../middleware/isAdmin";
 
 const BlogRoute=Express.Router();
 
