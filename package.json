@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "This brand of mine will help people to reach me, to know more about me, my skills and my work experience, and have access on my blogs # Project Description  This project contains Model and controller for for the app. It creates APIs endpoints that the client uses to access the data on server # Technonlogies - Environment : Nodejs - Package Manager : NPM - Compiler : Babel - Framework: Express.js - Database: MongoDB",
   "main": "index.js",
+  
   "scripts": {
     "dev": "nodemon --exec babel-node src/index.js",
-    "start": "node --experimental-specifier-resolution=node src/index.js",
+    "start": "babel-node src/index.js",
     "test": "nyc mocha --recursive --exit --timeout 100000 --require @babel/register src/test/**/*.test.js"
   },
   "repository": {
