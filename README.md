@@ -15,18 +15,18 @@ This brand of mine will help people to reach me, to know more about me, my skill
 # Requirements and Installation steps
 
 You need the following to be able to run the application
-Node a runtime environment for JavaScript
+1. Node a runtime environment for JavaScript
 
-1. Postman to test the Api endpoints
+2. Postman to test the Api endpoints
 
-2. Visual studio code for editing and running the app
+3. Visual studio code for editing and running the app
 
-MongoDB for Database
+4. MongoDB for Database
 
 # Installation
 ## A. Clone the project
 From your computer, open terminal
-Run git clone git@github.com:patsicko/my-brand-bakend.git to clone the repository OR Download the project
+Run git clone https://github.com/patsicko/my-brand-bakend.git to clone the repository OR Download the project
 ## B. Setting up the environment
 - Create a file and name it .env in root directory
 - Find a file named .env.example
