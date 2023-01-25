@@ -22,7 +22,7 @@ class userController {
           });
           console.log("user created");
         } catch (error) {
-          res.status(401).json({
+          res.status(400).json({
             "status":"error",
             "message":error.message
           });
@@ -33,9 +33,15 @@ class userController {
     static async getUsers(req,res) {
         try {
        const users=await User.find();
-       res.status(200).json(users)
+       res.status(200).json({
+        "status":"success",
+        "data":users
+       })
         }catch (error){
-            res.status(404).json(error.message);
+            res.status(404).json({
+              "status":"error",
+              "message":error.message
+            });
         }
     }
 
