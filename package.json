@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "nodemon --exec babel-node index.js",
     "start": "node --experimental-specifier-resolution=node index.js",
-    "test": "nyc mocha --recursive --exit --require @babel/register test/**/*.test.js"
+    "test": "nyc mocha --recursive --exit --timeout 100000 --require @babel/register test/**/*.test.js"
   },
   "repository": {
     "type": "git",
@@ -42,6 +42,7 @@
     "@babel/plugin-transform-runtime": "^7.19.6",
     "@babel/preset-env": "^7.20.2",
     "chai": "^4.3.7",
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.20",
+    "supertest": "^6.3.3"
   }
 }

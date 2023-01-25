@@ -31,3 +31,6 @@ app.use("/api",ContactRoute);
 app.use("/api",BlogRoute);
 app.use("/api",userRoute);
 app.use("/admin",adminRoute);
+
+
+export default app
