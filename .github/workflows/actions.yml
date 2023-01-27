@@ -30,5 +30,4 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm install
       - run: npm test
-      - name: Upload coverage to Codecov uses:codecov/codecov-action@v1 with:token:${{ secrets.CODECOV_TOKEN }} file:coverage/lcov.info
    
