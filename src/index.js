@@ -5,7 +5,10 @@ import dbConnect from "./database/db";
 import mongoose from "mongoose";
 import Router from "./routes/routes";
 import  {serve,setup} from "swagger-ui-express";
-import swaggerSpecs from "./swagger.json"
+import swaggerDocumentations from "./documentations";
+
+
+import swaggerDoc from "swagger-ui-express";
 
 
 mongoose.set('strictQuery',true)
@@ -26,7 +29,12 @@ app.listen(port,()=>{
 })
 
 dbConnect();
-app.use('/api-docs', serve, setup(swaggerSpecs));
+// app.use('/api-docs', serve, setup(swaggerSpecs));
 app.use("/",Router)
+
+
+app.use("/documentations" ,swaggerDoc.serve)
+app.use("/documentations" ,swaggerDoc.setup(swaggerDocumentations))
+
 
 export default app

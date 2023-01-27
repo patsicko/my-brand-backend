@@ -8,31 +8,7 @@ import {isAdmin,findUserById} from "../../middleware/isAdmin";
 const userRoute=express.Router();
 
 
-/**
- * @swagger
- * /createUser:
- *   post:
- *     tags:
- *       - USER APIs
- *     summary: Create a new user
- *     requestBody:
- *         required: true
- *         content:
- *           application/json:
- *             schema:
- *                 $ref: '#/components/schema/users'
- *     responses:
- *       200:
- *         description: User Created
- *         content:
- *           application/json:
- *             schema:
- *                 $ref: '#/components/schema/responses'
- *       400:
- *         description: bad request
- *       405:
- *         description: Method not allowed
- */
+
 
 
 
@@ -40,7 +16,7 @@ userRoute.post("/createUser",validateUser,userController.createUser);
 
 userRoute.get("/getUsers/",verifyToken,userController.getUsers);
 userRoute.get("/getUser/:id",verifyToken,userController.getUser);
-userRoute.get("/deleteUser/:id",verifyToken,findUserById,isAdmin,userController.deleteUser);
+userRoute.get("/deleteUser/:id",userController.deleteUser);
 userRoute.post("/login",userController.login);
 
 
