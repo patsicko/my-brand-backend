@@ -11,7 +11,7 @@ BlogRoute.post("/createBlog/:id",verifyToken,findUserById,isAdmin,upload.single(
 BlogRoute.get("/getBlogs",BlogController.retrieveBlogAll);
 BlogRoute.get("/getBlog/:id",BlogController.retrieveBlogSingle);
 BlogRoute.get("/deleteBlog/:id",verifyToken,BlogController.deleteBlog);
-BlogRoute.put("/updateBlog/:id",upload.single('blogImage'),validateBlog,BlogController.updateBlog);
+BlogRoute.put("/updateBlog/:id",verifyToken,upload.single('blogImage'),validateBlog,BlogController.updateBlog);
 
 
 
