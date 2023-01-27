@@ -1,6 +1,7 @@
 
 # Project Title
 ## my-brand-bakend
+<img alt="Codecov" src="https://img.shields.io/codecov/c/gh/patsicko/my-brand-backend?color=green&style=for-the-badge">
 # Project vision
 This brand of mine will help people to reach me, to know more about me, my skills and my work experience, and have access on my blogs
 # Project Description
