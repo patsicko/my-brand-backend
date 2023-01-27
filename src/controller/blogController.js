@@ -17,7 +17,7 @@ static async createBlog(req,res){
         blogText:req.body.blogText,
         blogComments:req.body.blogComments,
     });
-
+ 
     await blog.save();;
     res.status(201).json(blog); 
     console.log('blog created successully');
@@ -95,38 +95,6 @@ static async deleteBlog(req,res){
 
 
 static async updateBlog(req,res){
-//     try{
-  
-    // let blog=await Blog.findOne({id:req.params.id});
-//     console.log(blog)
-//     await cloudinary.uploader.destroy(blog.blogImage)
-//     const result=await cloudinary.uploader.upload(req.file.path);
-//     console.log("this is a blog image",result)
-//     const updatedBlog=await Blog.findByIdAndUpdate(req.params._id,{$set:{
-//         blogTitle:req.body.blogTitle,
-//         blogAuthor:req.body.blogAuthor,
-//         blogImage:result.secure_url,
-//         blogText:req.body.blogText,
-
-//     }},{new:true})
-
-
-        
-
-//         res.status(200).json({
-//             "status":"success",
-//             "message":"blog updated successfully",
-//             "data":updatedBlog
-//         })
-
-//     }catch(error){
-//      res.status(404).json({
-//         "status":"error",
-//         "message":error.message
-//      })
-//     }
-
-
 
 try {
     const blog = await Blog.findById(req.params.id);
