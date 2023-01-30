@@ -2,10 +2,12 @@ import User from "../model/userModel";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 
+
 class userController {
 
     static async createUser(req, res) {
       const salt = await bcrypt.genSalt(10);
+     
       const hashedPassword = await bcrypt.hash(req.body.password, salt);
         try {
           const user = new User({
@@ -79,6 +81,7 @@ static async deleteUser(req,res) {
 static async login(req,res){
   try {
     const user=await User.findOne({email:req.body.email});
+  
     if(!user){
       res.status(404).json(
         {
@@ -96,6 +99,7 @@ static async login(req,res){
       });
     }
     const token=jwt.sign({id:user._id},process.env.JWT_SECRET,{expiresIn:"2h"});
+    console.log(token);
     res.status(200).json({
       "status":"success",data:user,token:token})
   } catch (error) {

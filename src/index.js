@@ -32,7 +32,6 @@ dbConnect();
 // app.use('/api-docs', serve, setup(swaggerSpecs));
 app.use("/",Router)
 
-
 app.use("/documentations" ,swaggerDoc.serve)
 app.use("/documentations" ,swaggerDoc.setup(swaggerDocumentations))
 

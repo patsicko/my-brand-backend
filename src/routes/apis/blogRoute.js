@@ -15,4 +15,4 @@ BlogRoute.put("/updateBlog/:id",verifyToken,upload.single('blogImage'),validateB
 
 
 
-export default BlogRoute
+export default BlogRoute 
