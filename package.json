@@ -5,10 +5,12 @@
   "main": "index.js",
   
   "scripts": {
-    "dev": "nodemon --exec babel-node src/index.js",
+   "dev": "nodemon --exec babel-node src/index.js",
     "build": "babel src -d dist",
     "start": "node dist/index.js",
     "test": "nyc mocha --recursive --exit --timeout 100000 --require @babel/register src/test/**/*.test.js"
+    
+  },
     
   },
   "repository": {
