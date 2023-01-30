@@ -3,6 +3,7 @@ import jwt from 'jsonwebtoken';
  const verifyToken = (req, res, next) => {
     try {
         const authHeader = req.headers.token;
+
         if(!authHeader) {
             return res.status(401).json({message:"unauthorized"});
         }

@@ -1,5 +1,5 @@
 
-import ContactRoute from "./apis/ContactRoute";
+import ContactRouter from "./apis/ContactRoute";
 import BlogRoute from "./apis/blogRoute";
 import userRoute from "./apis/userRoute";
 import adminRoute from "./apis/adminRoute";
@@ -14,7 +14,7 @@ Router.use(express.json());
 
 
 
-Router.use("/api",ContactRoute);
+Router.use("/api",ContactRouter);
 Router.use("/api",BlogRoute);
 Router.use("/api",userRoute);
 Router.use("/admin",adminRoute);

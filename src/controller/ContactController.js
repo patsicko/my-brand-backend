@@ -64,7 +64,7 @@ class ContactController {
     try{
      
       await Message.findByIdAndDelete(req.params.id);
-        res.status(200).json({
+        res.status(204).json({
           "status":"success",
           "message":"message deleted"
         })
@@ -82,4 +82,7 @@ class ContactController {
 }
 
 
+
+
 export default ContactController;
+
