@@ -3,6 +3,13 @@
 ## my-brand-bakend
 
 ![build](https://github.com/patsicko/my-brand-backend/actions/workflows/actions.yml/badge.svg?event=push)
+
+[![codecov](https://codecov.io/gh/yourusername/yourrepo/branch/master/graph/badge.svg)](https://codecov.io/gh/patsicko/my-brand-backend)
+
+![MY CAPSTON BACKEND](https://img.shields.io/badge/code--coverage-65.5%25-yellow)
+
+[![Coverage Status](https://coveralls.io/repos/github/patsicko/my-brand-bakend/badge.svg?branch=master)](https://coveralls.io/github/USERNAME/REPO?branch=master)
+
 # Project vision
 This brand of mine will help people to reach me, to know more about me, my skills and my work experience, and have access on my blogs
 # Project Description
