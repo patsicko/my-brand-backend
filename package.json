@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "This brand of mine will help people to reach me, to know more about me, my skills and my work experience, and have access on my blogs # Project Description  This project contains Model and controller for for the app. It creates APIs endpoints that the client uses to access the data on server # Technonlogies - Environment : Nodejs - Package Manager : NPM - Compiler : Babel - Framework: Express.js - Database: MongoDB",
   "main": "index.js",
-  
   "scripts": {
     
     "build": "babel src -d dist",
@@ -29,6 +28,7 @@
     "@babel/runtime": "^7.20.7",
     "bcrypt": "^5.1.0",
     "chai-http": "^4.3.0",
+    "check-code-coverage": "^1.10.4",
     "cloudinary": "^1.33.0",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",

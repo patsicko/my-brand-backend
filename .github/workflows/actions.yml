@@ -30,5 +30,10 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm install
       - run: npm test
+<<<<<<< HEAD
+      - run: npm run coverage
+   
+=======
 
    
+>>>>>>> master
