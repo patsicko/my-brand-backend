@@ -2,6 +2,8 @@
 # Project Title
 ## my-brand-bakend
 
+![build](https://github.com/patsicko/my-brand-backend/actions/workflows/actions.yml/badge.svg?event=push)
+
 [![codecov](https://codecov.io/gh/yourusername/yourrepo/branch/master/graph/badge.svg)](https://codecov.io/gh/patsicko/my-brand-backend)
 
 ![MY CAPSTON BACKEND](https://img.shields.io/badge/code--coverage-65.5%25-yellow)
