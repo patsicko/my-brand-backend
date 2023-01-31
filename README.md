@@ -2,6 +2,8 @@
 # Project Title
 ## my-brand-bakend
 
+![example event parameter](https://github.com/github/docs/actions/workflows/main.yml/badge.svg?event=push)
+
 ![build](https://github.com/patsicko/my-brand-backend/actions/workflows/actions.yml/badge.svg?event=push)
 
 [![codecov](https://codecov.io/gh/yourusername/yourrepo/branch/master/graph/badge.svg)](https://codecov.io/gh/patsicko/my-brand-backend)
