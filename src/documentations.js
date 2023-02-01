@@ -20,6 +20,10 @@ const swaggerDocumentations ={
           url: "http://localhost:3002",
           name:"development server"
       },
+      {
+        url: "https://my-brand-backend.cyclic.app/",
+        name:"deployment server"
+    },
   ],
   components: {
       securitySchemes: {
