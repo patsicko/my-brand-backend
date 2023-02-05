@@ -242,7 +242,7 @@ it('should delete single message by id',(done)=>{
 
   id=message._id;
 
-  request(app).get(`/api/deleteMessage/${id}`).set('token',`Bearer ${token}`).end((error,res)=>{
+  request(app).delete(`/api/deleteMessage/${id}`).set('token',`Bearer ${token}`).end((error,res)=>{
     expect(res).to.have.status(204);
     done();
   })
@@ -322,7 +322,7 @@ it("should delete a blog",(done)=>{
   id=blog._id;
 console.log(id);
 console.log("this is token:",token)
-request(app).get(`/api/deleteBlog/${id}`).set('token',`Bearer ${token}`).end((error,res)=>{
+request(app).delete(`/api/deleteBlog/${id}`).set('token',`Bearer ${token}`).end((error,res)=>{
 
   expect(res).to.have.status(204);
   done()
