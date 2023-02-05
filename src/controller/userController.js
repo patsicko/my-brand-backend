@@ -68,7 +68,7 @@ static async deleteUser(req,res) {
 
     try{
         const user=await User.findOneAndDelete({id:req.params.id});
-        res.status(200).json({
+        res.status(204).json({
             "status":"success", "message":"user deleted"})
     }catch (error){
         res.status(404).json({

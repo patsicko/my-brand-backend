@@ -126,7 +126,7 @@ describe('users endpoints', () => {
 
 
 
-  it('it should update a user', (done) => {
+  it('it should delete a user', (done) => {
 
 
     const user= new User({
@@ -141,11 +141,11 @@ describe('users endpoints', () => {
 
   user.save();
    id=user._id;
-  request(app).get(`/api/deleteUser/${id}`)
+  request(app).delete(`/api/deleteUser/${id}`)
   .set('token', `Bearer ${token}`)
   .end((error, res) => {
             
-    chai.expect(res).to.have.status(200);
+    chai.expect(res).to.have.status(204);
     
     done();
   });
