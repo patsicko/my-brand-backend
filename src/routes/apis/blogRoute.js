@@ -10,7 +10,7 @@ const BlogRoute=Express.Router();
 BlogRoute.post("/createBlog/:id",verifyToken,findUserById,isAdmin,upload.single('blogImage'),validateBlog,BlogController.createBlog);
 BlogRoute.get("/getBlogs",BlogController.retrieveBlogAll);
 BlogRoute.get("/getBlog/:id",BlogController.retrieveBlogSingle);
-BlogRoute.get("/deleteBlog/:id",verifyToken,BlogController.deleteBlog);
+BlogRoute.delete("/deleteBlog/:id",verifyToken,BlogController.deleteBlog);
 BlogRoute.put("/updateBlog/:id",verifyToken,upload.single('blogImage'),validateBlog,BlogController.updateBlog);
 
 
