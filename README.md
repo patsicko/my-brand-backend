@@ -1,6 +1,6 @@
 
 # Project Title
-## my-brand-bakend
+## my-brand-backend
 
 
 ![example workflow](https://github.com/patsicko/my-brand-backend/actions/workflows/actions.yml/badge.svg)
