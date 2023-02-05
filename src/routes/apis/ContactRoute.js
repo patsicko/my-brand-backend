@@ -11,6 +11,6 @@ const ContactRouter=Express.Router();
 ContactRouter.post("/createMessage",validateMessage,ContactController.createMessage);
 ContactRouter.get("/getMessages/",verifyToken,ContactController.getMessages);
 ContactRouter.get("/getMessage/:id",verifyToken,ContactController.getSingleMessage);
-ContactRouter.get("/deleteMessage/:id",verifyToken,ContactController.deleteMessage);
+ContactRouter.delete("/deleteMessage/:id",verifyToken,ContactController.deleteMessage);
 
  export default ContactRouter

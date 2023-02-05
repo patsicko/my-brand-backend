@@ -228,7 +228,7 @@ const getUser ={
         get:getUser
     },
     "/api/deleteUser/{id}": {
-        get:deleteUser
+        delete:deleteUser
     }
 }
 
