@@ -88,7 +88,7 @@ const createBlog = {
                 schema:{
                     type:"object",
                     properties:{
-                        Blogtitle:{
+                        BlogTitle:{
                             type:"string",
                             description:"title of the blog",
                             example:"digital electronics"
