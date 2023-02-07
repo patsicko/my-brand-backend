@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 const userSchema=mongoose.Schema({
     fname:{
         type:String,
+        
        
     },
     lname:{

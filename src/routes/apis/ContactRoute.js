@@ -2,7 +2,7 @@
 import Express  from "express";
 import validateMessage from "../../middleware/messageValidation";
 import verifyToken from "../../middleware/authenticate";
-import {isAdmin,findUserById} from "../../middleware/isAdmin";
+import isAdmin from "../../middleware/isAdmin";
 
 
 import ContactController from "../../controller/ContactController";

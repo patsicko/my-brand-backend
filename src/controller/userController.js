@@ -103,6 +103,7 @@ static async login(req,res){
     res.status(200).json({
       "status":"success",data:user,token:token})
   } catch (error) {
+    console.log(error.message)
     res.status(401).json({status:"error",message:error.message})
   }
 }
