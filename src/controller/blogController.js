@@ -57,7 +57,7 @@ res.status(200).json({
 static async retrieveBlogSingle(req,res){
     try{
         
-        const blog=await Blog.findOne(req.params._id);
+        const blog=await Blog.findById(req.params.id);
 
         res.status(200).json({
             "status":"success",
