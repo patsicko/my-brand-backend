@@ -19,7 +19,10 @@ static async createBlog(req,res){
     });
  
     await blog.save();;
-    res.status(201).json(blog); 
+    res.status(201).json({
+      "status":"success",
+      "data":blog  
+    }); 
     console.log('blog created successully');
  }catch(error){
     res.status(401).json({
