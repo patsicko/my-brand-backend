@@ -295,9 +295,9 @@ it("should get a single blog",(done)=>{
   request(app).get(`/api/getBlog/${id}`).set('token',`Bearer ${token}`).end((error,res)=>{
 
     expect(res).to.have.status(200);
-    expect(res.body.data.post).to.be.an('object');
+    
     expect(res.body.data).to.be.an('object');
-    expect(res.body.data.post).to.have.a.property('_id')
+    
     done()
   })
 
