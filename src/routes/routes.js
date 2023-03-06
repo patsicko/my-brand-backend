@@ -6,7 +6,9 @@ import adminRoute from "./apis/adminRoute";
 import swaggerUi  from "swagger-ui-express";
 import express  from "express";
 import docs from "../documentations"
+import { createRequire } from 'module';
 
+const require = createRequire(import.meta.url);
 
 const Router = express.Router();
 
@@ -21,3 +23,4 @@ Router.use("/admin",adminRoute);
 // Router.use("/swaggerDocs",swaggerUi.serve,swaggerUi.setup(docs));
 
 export default Router;
+

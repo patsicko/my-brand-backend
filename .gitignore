@@ -4,3 +4,7 @@ draft.js
 .nyc_output
 coverage
 dist
+
+
+temp_auto_push.bat
+temp_interactive_push.bat
